@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel ="stylesheet" href = "style.css" />
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Fun Web</h1>
+  <p>This is my demo website.</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="dateTime.html">Date and Time</a>
+</div>
+<div id ="bg">
+    <h3>Click to display today's date and time.</h2>
+
+    <button type="button"  id = "button" onclick="document.getElementById('dateTime').innerHTML = Date()">
+      Click here to display Date and Time.</button>
+
+    <p id="dateTime"></p>
+<div class="footer">© copyright 2020</div>
+</div>
+</body>
+</html> 

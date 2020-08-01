@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel ="stylesheet" href = "style.css" />
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Fun Web</h1>
+  <p>This is my demo website.</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="dateTime.html">Date and Time</a>
+</div>
+
+<div class="row_1">
+  
+  <div id="redColorDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
+  <div id="greenColorDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+ 
+  <div id="blueColorDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
+  <div id="yelloColorDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
+</div>
+
+<div class="row-2">
+  
+  <div class="colorBlocks" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img id="dragRed" src="image/red-1.png" draggable="true" ondragstart="drag(event)">
+   
+    <img id="dragGreen" src="image/green-1.png" draggable="true" ondragstart="drag(event)">
+   
+    <img id="dragBlue" src="image/blue-1.png" draggable="true" ondragstart="drag(event)">
+    
+    <img id="dragYellow" src="image/yellow-1.png" draggable="true" ondragstart="drag(event)">
+  
+</div>
+
+<div class="footer">© copyright 2020</div>
+
+<!--======================================= width="336" height="69"-->
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<!--======================================= -->
+
+
+</body>
+</html>
